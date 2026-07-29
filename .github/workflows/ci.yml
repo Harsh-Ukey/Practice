@@ -38,7 +38,7 @@ jobs:
         - name: Login to docker hub
           uses: docker/login-action@v3
           with:
-            username: ${{ secrets.DOCKERHUB_USERNAME }}
+            username: harsh2143
             password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
         - name: Build and push docker image
@@ -47,7 +47,7 @@ jobs:
             context: .
             push: true
             no-cache: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-calc-image:latest
+            tags: harsh2143/my-calc-image:latest
 
     deploy:
       name: Trigger Render Deploy
