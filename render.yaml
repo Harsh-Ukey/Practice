@@ -1,9 +1,8 @@
 services:
   - type: web
     name: calculator-api
-    env: image
-    image:
-      url: docker.io/harsh2143/my-calc-image:latest
+    env: docker
+    dockerfilePath: ./Dockerfile
     plan: free
     healthCheckPath: /health
     envVars:
