@@ -1,8 +1,9 @@
 services:
   - type: web
     name: calculator-api
-    env: docker
-    dockerfilePath: ./Dockerfile
+    env: image
+    image:
+      url: docker.io/YOUR_DOCKERHUB_USERNAME/my-calc-image:latest
     plan: free
     healthCheckPath: /health
     envVars:
